@@ -24,4 +24,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.S3_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy to S3
-        run: yarn run deploy
+        run: aws s3 sync ./build/. s3://andrzej-kamyk
